@@ -14,7 +14,7 @@ body {
     position: fixed;
     width: 100%;
     color: white;
-    opacity: 0.85;
+    opacity: 1;
     height: 60px;
     top: 0px;
     z-index: 12;
@@ -62,35 +62,27 @@ body {
 }
 
 .hero {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
     background-image: url("../images/mountains.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     width: 100%;
-    text-align: center;
-    height: 100vh;
-}
-
-.hero {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    filter: blur(0.3px);
 }
 
 .hero h1,
 .hero h3 {
     margin: 0.3rem;
     text-align: center;
-    color: #ccd6f6;
-}
-
-.hero p {
-    margin-top: 4rem;
-    color: white;
+    color: rgb(10, 25, 47);  
+    filter: blur(0px);
 }
 
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
     .navbar {
         opacity: 1;
     }
@@ -201,9 +193,22 @@ body {
     }
 
     .hero {
-        background-image: url("../images/mountains.jpg");
-        text-align: center;
         height: 100vh;
+        filter: blur(0.3px);
+    }
+
+    .hero h1 {
+        font-size: 2.4rem;
+        color: aliceblue;
+    }
+
+    .hero h3 {
+        color: aliceblue;
+    }
+
+    .hero p {
+        color: aquamarine;
+        text-align: center;
     }
 
 }
