@@ -2,6 +2,7 @@ body {
     margin: 0;
     padding: 0;
     font-family: 'Golos Text', 'Open Sans', sans-serif;
+    background-color: rgb(10, 25, 47);
 }
 
 .navbar input[type="checkbox"],
@@ -65,13 +66,17 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
-    background-image: url("");
+    margin-bottom: 0px;
+    background-image: url("../images/forest.jpg");
     background-color: rgb(10, 25, 47);
     background-repeat: no-repeat;
     background-size: cover;
+    
+    margin-top: 2rem;
     width: 100%;
     height: 100vh;
     filter: blur(0.3px);
+    filter: opacity(0.95);
 }
 
 .hero-container {
@@ -80,24 +85,46 @@ body {
     grid-gap: 20px;
 }
 
+.hero h1,
+.hero h3 {
+    display: block;
+    margin: 1rem;
+    text-shadow: 1px 1px #000;
+}
+
 .hero h1 {
-    color: aliceblue;
+    color: rgb(100, 255, 218);
     margin-left: 5%;
-    font-size: 3rem;
+    font-size: 5rem;
 }
 
 .hero h3 {
-    color: aliceblue;
+    color: #CCD6F6;
     margin-left: 5%;
-    font-size: 1.8rem;
+    font-size: 2.5rem;
 }
 
-
-
 .intro {
-    color: aquamarine;
-    margin-left: 10%;
+    background-color: rgba(10, 25, 47, 0.5);
+    padding: 5%;
+    color: white;
+    text-shadow: 1px 1px #000;
+    right: 10rem;
     text-align: center;
+    font-size: 1.4rem;
+    margin-top: 3rem;
+}
+
+.intro img {
+    display: flex;
+    margin: auto;
+    grid-gap: 20px;
+    height: 30px;
+    width: 32px;
+}
+
+.intro img:hover {
+    transform: scale(1.2);
 }
 
 .picture {
@@ -112,8 +139,23 @@ body {
     max-width: 100%;
     height: auto;
     box-shadow: 6px 6px #444;
+
 }
 
+#about {
+    height: 100vh;
+    margin-top: 0px;
+    padding: 5%;
+}
+
+.abt-section h2 {
+    font-size: 1.8rem;
+    color: #8690AD;
+}
+
+.abt-section p {
+    color: #64FFDA;
+}
 
 @media (max-width: 767px) {
     .navbar {
@@ -203,9 +245,9 @@ body {
     .logo {
         position: absolute;
         color: #ccd6f6;
-        top: -20px;
+        top: -0px;
         right: 15px;
-        font-size: 2rem;
+        font-size: 1.4rem;
         cursor: pointer;
     }
 
@@ -230,52 +272,56 @@ body {
     }
 
     .hero h1 {
-        font-size: 1.8rem;
+        font-size: 1.5rem;
     }
 
     .hero h3 {
         font-size: 1.2rem;
+        color: #ccd6f6;
     }
 
     .hero h3,
     .hero h1 {
-        color: aliceblue;
         margin: 0.3rem;
         margin-left: 5%;
     }
 
-    .hero h3 {
-        color: #ccd6f6;
+    .intro {
+        top: 2rem;
     }
-    
-    .intro p{
-        color: aquamarine;
+
+    .intro p {
         margin-left: 10%;
         text-align: center;
         font-size: 0.8rem;
     }
-    
+
     .picture {
         display: flex;
         align-items: center;
         justify-content: center;
         margin-right: 1rem;
     }
-    
+
     .picture img {
         border-radius: 3%;
         max-width: 100%;
         height: auto;
         box-shadow: 6px 6px #444;
+        transform: scale(0.8);
     }
 
 }
 
-@media (min-width: 768px) {
-    
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+
     .hero {
         background-image: url("../images/forest.jpg");
-        
+
+    }
+
+    .hero h1 {
+        font-size: 2.8rem;
     }
 
     .hero h3,
@@ -286,13 +332,14 @@ body {
 
     .hero h3 {
         color: #ccd6f6;
+        font-size: 2rem;
     }
+
     .picture img {
         border-radius: 3%;
         max-width: 100%;
         height: auto;
         box-shadow: 6px 6px #444;
-        filter: brightness(75%);
     }
 
 }
