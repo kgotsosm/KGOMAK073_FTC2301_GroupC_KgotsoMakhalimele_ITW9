@@ -21,7 +21,6 @@ body {
 }
 
 .navbar-container {
-    display: flex;
     justify-content: space-between;
     align-items: center;
 }
@@ -66,19 +65,53 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
-    background-image: url("../images/mountains.jpg");
+    background-image: url("");
+    background-color: rgb(10, 25, 47);
     background-repeat: no-repeat;
     background-size: cover;
     width: 100%;
+    height: 100vh;
     filter: blur(0.3px);
 }
 
-.hero h1,
+.hero-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 20px;
+}
+
+.hero h1 {
+    color: aliceblue;
+    margin-left: 5%;
+    font-size: 3rem;
+}
+
 .hero h3 {
-    margin: 0.3rem;
+    color: aliceblue;
+    margin-left: 5%;
+    font-size: 1.8rem;
+}
+
+
+
+.intro {
+    color: aquamarine;
+    margin-left: 10%;
     text-align: center;
-    color: rgb(10, 25, 47);  
-    filter: blur(0px);
+}
+
+.picture {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 1rem;
+}
+
+.picture img {
+    border-radius: 3%;
+    max-width: 100%;
+    height: auto;
+    box-shadow: 6px 6px #444;
 }
 
 
@@ -194,21 +227,72 @@ body {
 
     .hero {
         height: 100vh;
-        filter: blur(0.3px);
     }
 
     .hero h1 {
-        font-size: 2.4rem;
-        color: aliceblue;
+        font-size: 1.8rem;
     }
 
     .hero h3 {
-        color: aliceblue;
+        font-size: 1.2rem;
     }
 
-    .hero p {
+    .hero h3,
+    .hero h1 {
+        color: aliceblue;
+        margin: 0.3rem;
+        margin-left: 5%;
+    }
+
+    .hero h3 {
+        color: #ccd6f6;
+    }
+    
+    .intro p{
         color: aquamarine;
+        margin-left: 10%;
         text-align: center;
+        font-size: 0.8rem;
+    }
+    
+    .picture {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-right: 1rem;
+    }
+    
+    .picture img {
+        border-radius: 3%;
+        max-width: 100%;
+        height: auto;
+        box-shadow: 6px 6px #444;
+    }
+
+}
+
+@media (min-width: 768px) {
+    
+    .hero {
+        background-image: url("../images/forest.jpg");
+        
+    }
+
+    .hero h3,
+    .hero h1 {
+        margin: 0.2rem;
+        margin-left: 5%;
+    }
+
+    .hero h3 {
+        color: #ccd6f6;
+    }
+    .picture img {
+        border-radius: 3%;
+        max-width: 100%;
+        height: auto;
+        box-shadow: 6px 6px #444;
+        filter: brightness(75%);
     }
 
 }
