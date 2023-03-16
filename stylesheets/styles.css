@@ -61,6 +61,11 @@ body {
     cursor: pointer;
 }
 
+.logo:hover {
+    color: #117964;
+    transition: color 0.3s ease-in-out;
+}
+
 .hero {
     display: flex;
     flex-direction: column;
@@ -71,7 +76,7 @@ body {
     background-color: rgb(10, 25, 47);
     background-repeat: no-repeat;
     background-size: cover;
-    
+
     margin-top: 2rem;
     width: 100%;
     height: 100vh;
@@ -101,7 +106,7 @@ body {
 .hero h3 {
     color: #CCD6F6;
     margin-left: 5%;
-    font-size: 2.5rem;
+    font-size: 2.4rem;
 }
 
 .intro {
@@ -113,18 +118,6 @@ body {
     text-align: center;
     font-size: 1.4rem;
     margin-top: 3rem;
-}
-
-.intro img {
-    display: flex;
-    margin: auto;
-    grid-gap: 20px;
-    height: 30px;
-    width: 32px;
-}
-
-.intro img:hover {
-    transform: scale(1.2);
 }
 
 .picture {
@@ -143,19 +136,106 @@ body {
 }
 
 #about {
-    height: 100vh;
     margin-top: 0px;
     padding: 5%;
 }
 
-.abt-section h2 {
-    font-size: 1.8rem;
+.head-underline {
+
+    display: block;
+    height: 1px;
+    width: 50%;
+    border-radius: 10px;
+    background: #777676;
+
+}
+
+h2 {
+    font-size: 3rem;
     color: #8690AD;
+}
+
+h3 {
+    font-size: 1.2rem;
+    color: #8690AD;
+}
+
+.abt-section {
+    display: grid;
+    grid-template-columns: 6fr 4fr;
+    grid-template-rows: auto;
+}
+
+.education p {
+    color: #abf5e4;
+    font-size: 0.9rem;
+    line-height: 1.5em;
 }
 
 .abt-section p {
     color: #64FFDA;
+    line-height: 1.5em;
 }
+
+#skills {
+    padding: 5%;
+    margin-top: 2rem;
+}
+
+.skill-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 3rem;
+}
+
+.webdev,
+.python,
+.java {
+    margin: 1rem;
+    width: 50vw;
+    height: 35vh;
+    box-shadow:  0px 19px 5px rgb(0 0 0 / 22%);
+    border-radius: 3%;
+}
+
+.webdev {
+    background-image: url("../images/webdev.jpg");
+    background-position: center;
+    background-size: cover;
+}
+
+.python {
+    background-image: url("../images/python.jpg");
+    background-position: center;
+    background-size: cover;
+}
+
+.java {
+    background-image: url("../images/java.jpg");
+    background-position: center;
+    background-size: cover;
+}
+
+#projects {
+    padding: 5%;
+}
+
+.projects-container {
+    margin-top: 1rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 40vh 40vh;
+    gap: 1rem;
+
+}
+
+.projects-container div {
+    text-align: center;
+    border: 1px solid #64FFDA;
+    color: #fff;
+}
+
+
 
 @media (max-width: 767px) {
     .navbar {
@@ -198,7 +278,7 @@ body {
 
     .navbar-container .hamburger-lines .line {
         display: block;
-        height: 4px;
+        height: 2px;
         width: 100%;
         border-radius: 10px;
         background: #9BE9D7;
@@ -267,12 +347,16 @@ body {
         transform: rotate(-35deg);
     }
 
+    h2 {
+        font-size: 2rem;
+    }
+
     .hero {
         height: 100vh;
     }
 
     .hero h1 {
-        font-size: 1.5rem;
+        font-size: 2rem;
     }
 
     .hero h3 {
@@ -311,9 +395,14 @@ body {
         transform: scale(0.8);
     }
 
+    .skill-container {
+        flex-wrap: wrap;
+    }
+
+
 }
 
-@media screen and (min-width: 768px) and (max-width: 1023px) {
+@media screen and (max-width: 1023px) {
 
     .hero {
         background-image: url("../images/forest.jpg");
@@ -335,11 +424,13 @@ body {
         font-size: 2rem;
     }
 
-    .picture img {
-        border-radius: 3%;
-        max-width: 100%;
-        height: auto;
-        box-shadow: 6px 6px #444;
+    h2 {
+        font-size: 2.3rem;
     }
+
+    p {
+        font-size: 1.1rem;
+    }
+
 
 }
